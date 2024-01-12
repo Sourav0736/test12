@@ -1,2 +1,2 @@
 # test12
-index file created
+just a testing repository
