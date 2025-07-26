@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Consulting & Software Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, article, footer {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    table, th, td {
+      border: 1px solid #444;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    form input, form textarea, form select {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechBridge Solutions</h1>
+    <p>Your partner in IT consulting and software support.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="mailto:support@techbridge.com">Email Us</a>
+    <a href="tel:+18001234567">Call Us</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Our Services</h2>
+      <ul>
+        <li>Cloud Consulting</li>
+        <li>Custom Software Development</li>
+        <li>24/7 Tech Support</li>
+      </ul>
+
+      <h3>Popular Tech Stacks We Support</h3>
+      <ol>
+        <li>MEAN Stack</li>
+        <li>MERN Stack</li>
+        <li>LAMP Stack</li>
+      </ol>
+
+      <h3>Service Overview</h3>
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Availability</th>
+          <th>Response Time</th>
+        </tr>
+        <tr>
+          <td>Software Maintenance</td>
+          <td>24/7</td>
+          <td>Within 2 hours</td>
+        </tr>
+        <tr>
+          <td>Security Consulting</td>
+          <td>Mon–Fri</td>
+          <td>Same Day</td>
+        </tr>
+      </table>
+
+      <h3>Technologies We Use</h3>
+      <dl>
+        <dt>DevOps</dt>
+        <dd>CI/CD, Docker, Kubernetes</dd>
+        <dt>Frontend</dt>
+        <dd>React, Angular, Vue</dd>
+      </dl>
+
+      <h3>About Us</h3>
+      <p>We have over 10 years of experience in delivering enterprise-grade software and consulting services.</p>
+
+      <h3>Watch Our Introduction</h3>
+      <video width="320" height="240" controls>
+        <source src="intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Listen to Our Client Testimonial</h3>
+      <audio controls>
+        <source src="testimonial.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+
+      <h3>Meet Our Team</h3>
+      <img src="team.jpg" alt="TechBridge Team" width="400">
+
+    </article>
+
+    <article>
+      <h2>Request a Consultation</h2>
+      <form action="submit_form.html" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="service">Service Needed:</label>
+        <select id="service" name="service">
+          <option value="consulting">IT Consulting</option>
+          <option value="development">Software Development</option>
+          <option value="support">Technical Support</option>
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="newsletter">Subscribe to newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time">
+
+        <label for="query">Describe Your Requirements:</label>
+        <textarea id="query" name="query" rows="5"></textarea>
+
+        <input type="submit" value="Request Consultation">
+        <input type="reset" value="Reset Form">
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechBridge Solutions | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
