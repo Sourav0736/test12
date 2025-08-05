@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Club Membership Management</title>
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1976d2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    main {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Membership Grid Section */
+    .memberships {
+      display: flex;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0.95;    
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #1976d2;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    .form-container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 70%;
+      margin: auto;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #d81b60;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    footer {
+      background-color: #212121;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Local Club Membership</h1>
+  </header>
+
+  <main>
+    <!-- Membership Types -->
+    <section class="memberships">
+      <div class="card">
+        <h2>Basic Membership</h2>
+        <p>Access to community events, monthly newsletter, and online portal access.</p>
+      </div>
+      <div class="card">
+        <h2>Premium Membership</h2>
+        <p>All Basic benefits + exclusive workshops, merchandise discounts, and VIP access.</p>
+      </div>
+      <div class="card">
+        <h2>Student Membership</h2>
+        <p>Affordable rates for students. Includes all Basic benefits + student-only events.</p>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="form-container">
+      <h3>Join the Club</h3>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="membership">Membership Type:</label>
+        <select id="membership" name="membership">
+          <option>Basic</option>
+          <option>Premium</option>
+          <option>Student</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Local Club | Designed for Community Engagement</p>
+  </footer>
+
+</body>
+</html>
