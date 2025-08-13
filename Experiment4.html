@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Scroll Website</title>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0d;
+        color: white;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #111;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+         display: flex;
+    }
+
+    .navbar ul li {
+        margin-left: 20px;
+        margin: 0 30px;
+    }
+
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+        background: #00cccc;
+        border-radius: 5px;
+    }
+
+    /* Sections */
+    section {
+        min-height: 100vh;
+        padding: 100px 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Login Box */
+    .login-box {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .login-box input {
+        width: 80%;
+        padding: 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .login-box input[type="submit"] {
+        background: #00cccc;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .login-box input[type="submit"]:hover {
+        background: #009999;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+    <h1>Galaxy Portal</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<!-- Sections -->
+<section id="home">
+    <h2>Welcome to the Galaxy Portal</h2>
+    <p>Explore the universe of possibilities.</p>
+</section>
+
+<section id="services" style="background:#1a1a1a;">
+    <h2>Our Services</h2>
+    <p>We provide interstellar travel guidance, space mapping, and more.</p>
+</section>
+
+<section id="login">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Launch">
+        </form>
+    </div>
+</section>
+
+<section id="contact" style="background:#1a1a1a;">
+    <h2>Contact Us</h2>
+    <p>Email: space@galaxyportal.com</p>
+</section>
+
+</body>
+</html>
