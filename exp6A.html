@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Calculator</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        padding: 40px;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    .container {
+        background: #fff;
+        padding: 25px;
+        max-width: 400px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input {
+        width: 95%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        border: none;
+        background: #007BFF;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    .result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>Budget Calculator</h1>
+<div class="container">
+    <label>Total Amount:</label>
+    <input type="number" id="amount" placeholder="Enter total amount">
+
+    <label>Room Rent (%):</label>
+    <input type="number" id="room" placeholder="Enter % for Room Rent">
+
+    <label>Accessories (%):</label>
+    <input type="number" id="accessories" placeholder="Enter % for Accessories">
+
+    <label>Emergency (%):</label>
+    <input type="number" id="emergency" placeholder="Enter % for Emergency">
+
+    <label>Saving (%):</label>
+    <input type="number" id="saving" placeholder="Enter % for Saving">
+
+    <button id="evaluate">Evaluate My Money</button>
+
+    <div class="result">
+        <p>Room Rent: <span id="roomVal">0</span></p>
+        <p>Accessories: <span id="accessoriesVal">0</span></p>
+        <p>Emergency: <span id="emergencyVal">0</span></p>
+        <p>Saving: <span id="savingVal">0</span></p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#evaluate").click(function(){
+        const amount = parseFloat($("#amount").val());
+        const room = parseFloat($("#room").val());
+        const accessories = parseFloat($("#accessories").val());
+        const emergency = parseFloat($("#emergency").val());
+        const saving = parseFloat($("#saving").val());
+
+        if (isNaN(amount) || isNaN(room) || isNaN(accessories) ||
+            isNaN(emergency) || isNaN(saving)) {
+            alert("Please enter valid numbers for all fields.");
+            return;
+        }
+
+        const totalPercent = room + accessories + emergency + saving;
+
+        if (totalPercent !== 100) {
+            alert("Total percentage must be exactly 100%!");
+            return;
+        }
+
+        const roomVal = (amount * room) / 100;
+        const accessoriesVal = (amount * accessories) / 100;
+        const emergencyVal = (amount * emergency) / 100;
+        const savingVal = (amount * saving) / 100;
+
+        // Display the calculated amounts
+        $("#roomVal").text(roomVal.toFixed(2));
+        $("#accessoriesVal").text(accessoriesVal.toFixed(2));
+        $("#emergencyVal").text(emergencyVal.toFixed(2));
+        $("#savingVal").text(savingVal.toFixed(2));
+    });
+});
+</script>
+
+</body>
+</html>
